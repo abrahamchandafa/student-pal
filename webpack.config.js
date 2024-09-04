@@ -9,5 +9,23 @@ module.exports = {
         filename: "main.js"
     },
     target: "web", //web for client-side, node for server-side
-    
+    devServer: {
+        port: "9500",
+        static: ["./public"], //which file to serve
+        open: true,
+        hot: true,
+        liveReload: true,
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }
+        ]
+    }
 }
