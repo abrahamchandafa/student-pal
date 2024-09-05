@@ -1,28 +1,58 @@
 import React from "react"
 import styled from "styled-components"
-import bootstrap from "bootstrap"
 
+const StyledHeader = styled.div`
+    background-color: var(--bs-dark);
+    top: 0;
+    left: 0;
+    width: 100%;
+`
 
-
+const StyledH2 = styled.h2`
+    margin-top: 8px;
+    margin-left: -20px;
+`
 
 const Header = () => {
     return (
-        <div>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-        </div>
+        <StyledHeader className="sticky-top">
+            <div className="row collapse" id="navbarToggleExternalContent">
+
+                <ul className="nav justify-content-end">
+                    <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">My account</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">Logout</a>
+                    </li>
+                    <li className="nav-item">
+                        <div>
+                            <a className="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-translate"></i></a>
+                            <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+                            <li><a className="dropdown-item" href="#">English</a></li>
+                            <li><a className="dropdown-item" href="#">Swahili</a></li>
+                            <li><a className="dropdown-item" href="#">語言</a></li>
+          </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div className="row">
+                <div className="col-1">
+                    <nav class="navbar navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div className="col-11 text-secondary container-fluid"><StyledH2><em>Student Pal</em></StyledH2></div>
+            </div>
+        </StyledHeader>
     )
 }
 
