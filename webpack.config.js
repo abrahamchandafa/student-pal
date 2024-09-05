@@ -2,7 +2,7 @@
 const path = require("path")
 
 module.exports = {
-    mode: "development",
+    mode: "development", // default is "production"
     entry: "./index.js",
     output: {
         path: path.resolve(__dirname, "public"),
@@ -13,7 +13,7 @@ module.exports = {
         port: "9500",
         static: ["./public"], //which file to serve
         open: true,
-        hot: true,
+        hot: true, //faster in dev mode, slower in production
         liveReload: true,
     },
     resolve: {
@@ -25,6 +25,38 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.(scss)$/,
+                use: [{
+                  // inject CSS to page
+                  loader: 'style-loader'
+                }, {
+                  // translates CSS into CommonJS modules
+                  loader: 'css-loader'
+                }, {
+                  // Run postcss actions
+                  loader: 'postcss-loader',
+                  options: {
+                    // `postcssOptions` is needed for postcss 8.x;
+                    // if you use postcss 7.x skip the key
+                    postcssOptions: {
+                      // postcss plugins, can be exported to postcss.config.js
+                      plugins: function () {
+                        return [
+                          require('autoprefixer')
+                        ];
+                      }
+                    }
+                  }
+                }, {
+                  // compiles Sass to CSS
+                  loader: 'sass-loader'
+                }]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     }
