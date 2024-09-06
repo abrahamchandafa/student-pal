@@ -2,7 +2,7 @@ import React from "react"
 
 const LoginPage = () => {
     return (
-        <div className="bg-light" style={{margin: '50px', height: "70vh", padding: "50px", alignContent: "center"}}>
+        <div className="bg-light" style={{margin: '50px', height: "80vh", padding: "50px", alignContent: "center"}}>
             <div style={{margin: '0px'}}>
             <h1 className="text-center text-primary">Login</h1>
             <form>

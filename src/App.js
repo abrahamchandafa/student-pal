@@ -4,9 +4,12 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoginPage from "./pages/loginPage";
+import HomePage from "./pages/homePage";
+import ErrorPage from "./pages/ErrorPage";
+import Unauthorized from "./pages/Unauthorized";
 
 const StyledMain = styled.div`
-    min-height: 90vh
+
 `
 
 function App() {
@@ -14,7 +17,7 @@ function App() {
     <div className="">
         <Header />
         <StyledMain>
-            <LoginPage />
+            <HomePage />
         </StyledMain>  
         <Footer />
       </div>
