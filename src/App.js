@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,20 +8,22 @@ import HomePage from "./pages/homePage";
 import ErrorPage from "./pages/ErrorPage";
 import Unauthorized from "./pages/Unauthorized";
 
-const StyledMain = styled.div`
-
-`
-
 function App() {
-    return (
-    <div className="">
+  return (
+      <div>
         <Header />
-        <StyledMain>
-            <HomePage />
-        </StyledMain>  
+        <Routes>
+
+          <Route path="/homepage/" element={<HomePage />} />
+          <Route path="/error/" element={<ErrorPage />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/unauthorized/" element={<Unauthorized />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
         <Footer />
       </div>
-    );
-  }
 
-export default App
+  );
+}
+
+export default App;
