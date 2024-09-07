@@ -10,11 +10,12 @@ module.exports = {
     },
     target: "web", //web for client-side, node for server-side
     devServer: {
-        port: "9500",
+        port: "3000",
         static: ["./public"], //which file to serve
         open: true,
         hot: true, //faster in dev mode, slower in production
         liveReload: true,
+        historyApiFallback: true,
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
@@ -57,7 +58,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
-            }
+            },
+            {
+              test: /\.(woff|woff2)$/,
+              use: 'url-loader',
+            },
         ]
     }
 }
