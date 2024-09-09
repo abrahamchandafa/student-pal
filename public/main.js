@@ -619,7 +619,7 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"db000d08a7fc8ca90894.woff2?dd67030699838ea613ee6dbda90effa6\";\n\n//# sourceURL=webpack://student-pal/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2?");
+eval("module.exports = __webpack_require__.p + \"b7bcc075b395c14ce8c2.woff2?dd67030699838ea613ee6dbda90effa6\";\n\n//# sourceURL=webpack://student-pal/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2?");
 
 /***/ }),
 
@@ -630,7 +630,7 @@ eval("module.exports = __webpack_require__.p + \"db000d08a7fc8ca90894.woff2?dd67
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"b11513ec41e5f4b223d9.woff?dd67030699838ea613ee6dbda90effa6\";\n\n//# sourceURL=webpack://student-pal/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff?");
+eval("module.exports = __webpack_require__.p + \"39795c0b4513de014cf8.woff?dd67030699838ea613ee6dbda90effa6\";\n\n//# sourceURL=webpack://student-pal/./node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff?");
 
 /***/ }),
 
