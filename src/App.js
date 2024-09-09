@@ -13,7 +13,6 @@ function App() {
       <div>
         <Header />
         <Routes>
-
           <Route path="/homepage/" element={<HomePage />} />
           <Route path="/error/" element={<ErrorPage />} />
           <Route path="/" element={<LoginPage />} />
