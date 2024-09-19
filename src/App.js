@@ -13,10 +13,10 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/homepage/" element={<HomePage />} />
-          <Route path="/error/" element={<ErrorPage />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/error" element={<ErrorPage />} />
           <Route path="/" element={<LoginPage />} />
-          <Route path="/unauthorized/" element={<Unauthorized />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />

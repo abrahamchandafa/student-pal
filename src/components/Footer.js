@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
     background-color: var(--bs-dark);
     bottom: 0;
     left: 0;

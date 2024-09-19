@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { NavLink } from "react-router-dom"
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
     background-color: var(--bs-dark);
     top: 0;
     left: 0;
@@ -17,16 +18,15 @@ const Header = () => {
     return (
         <StyledHeader className="sticky-top">
             <div className="row collapse" id="navbarToggleExternalContent">
-
                 <ul className="nav justify-content-end">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <NavLink className="nav-link active" aria-current="page" to="/homepage">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">My account</a>
+                        <NavLink className="nav-link active" aria-current="page" to="/unauthorized">My account</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Logout</a>
+                        <NavLink className="nav-link active" aria-current="page" to="/">Logout</NavLink>
                     </li>
                     <li className="nav-item">
                         <div>
@@ -35,7 +35,7 @@ const Header = () => {
                             <li><a className="dropdown-item" href="#">English</a></li>
                             <li><a className="dropdown-item" href="#">Swahili</a></li>
                             <li><a className="dropdown-item" href="#">語言</a></li>
-          </ul>
+                            </ul>
                         </div>
                     </li>
                 </ul>
